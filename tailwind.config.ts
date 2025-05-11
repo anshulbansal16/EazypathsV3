@@ -7,7 +7,6 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "",
   theme: {
@@ -76,6 +75,16 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  safelist: [
+    // Add any dynamic classes you use, e.g.:
+    'text-primary', 'text-secondary', 'text-accent', 'text-destructive',
+    'bg-primary', 'bg-secondary', 'bg-accent', 'bg-destructive',
+    'border-primary', 'border-secondary', 'border-accent', 'border-destructive',
+    'text-muted-foreground', 'bg-background', 'text-foreground',
+    'from-primary', 'to-blue-600', 'from-blue-50', 'to-indigo-50',
+    'bg-gradient-to-r', 'bg-clip-text', 'text-transparent',
+    // Add more as needed based on your dynamic usage
+  ],
 } satisfies Config
 
 export default config
