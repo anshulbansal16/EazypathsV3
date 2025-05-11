@@ -225,3 +225,14 @@
 .theme-toggle-button {
   @apply bg-background text-foreground border border-primary/20 hover:bg-accent;
 }
+
+/* Navbar utility classes */
+.nav-link {
+  @apply text-sm font-medium text-foreground hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-accent;
+}
+.login-btn {
+  @apply bg-primary hover:bg-primary/90 text-white font-medium border border-primary/20 shadow-md px-4 py-2 rounded-md;
+}
+.mobile-nav-link {
+  @apply block px-3 py-2 text-foreground hover:bg-accent rounded-md;
+}
